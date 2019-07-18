@@ -1,0 +1,24 @@
+<div align="center">
+<table class="table" >
+        <thead class="thead-dark">
+    <tr>
+        <th> Album Id</th>
+        <th>Title</th>
+        <th> Artist</th>
+        <th> Price</th>
+        <th>Action</th>
+    </tr>
+        </thead>
+        <tbody>
+    <tr *ngFor="let data of showalbumAll ;let i= index">
+        <td><b>{{data.albumId}}</b></td>
+        <td><b>{{data.title}}</b></td>
+        <td><b>{{data.artist}}</b></td>
+        <td><b>{{data.price}}</b></td>
+        <td><input type="button" value ="DELETE" class="btn btn-danger"(click)="deleteAlbum(i)" /></td>
+        
+    </tr>
+</tbody>
+<br>
+</table>
+</div>

@@ -1,0 +1,38 @@
+<h4>Add Album</h4>
+<form #albumForm=ngForm (ngSubmit)="addAlbum1()">
+<div class="form-group row">
+        <label for="inputId" class="col-sm-2 col-form-label"><b>&nbsp;&nbsp;&nbsp;&nbsp;Album ID</b></label>
+            <div class="col-sm-3">
+            <input type="text" class="form-control" name="id" id="aid" placeholder="Enter Album Id" [(ngModel)]="albumId" #idControl="ngModel" required  >
+            <span  class="alert alert-danger" role="alert" *ngIf="idControl.touched && idControl.invalid">Album ID should be filled</span>    
+        </div>
+    </div>
+        <div class="form-group row">
+                <label for="inputtitle" class="col-sm-2 col-form-label"><b>&nbsp;&nbsp;&nbsp;&nbsp;Title</b></label>
+                    <div class="col-sm-3">
+                    <input type="text" class="form-control" name="title" id="atitle" placeholder="Enter Album Title" [(ngModel)]="title" #titleControl="ngModel" required  >
+                    <span  class="alert alert-danger" role="alert" *ngIf="titleControl.touched && titleControl.invalid">Title should be filled</span>    
+                </div>
+            </div>
+            <div class="form-group row">
+                    <label for="inputartist" class="col-sm-2 col-form-label"><b>&nbsp;&nbsp;&nbsp;&nbsp;Artist</b></label>
+                        <div class="col-sm-3">
+                        <input type="text" class="form-control" name="artist" id="aartist" placeholder="Enter Artist Name "[(ngModel)]="artist" #artistControl="ngModel" required  >
+                        <span  class="alert alert-danger" role="alert" *ngIf="artistControl.touched && artistControl.invalid">Title should be filled</span>    
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                            <label for="inputprice" class="col-sm-2 col-form-label"><b>&nbsp;&nbsp;&nbsp;&nbsp;Price</b></label>
+                                <div class="col-sm-3">
+                                <input type="text" class="form-control" name="price" id="aprice"placeholder="Enter Price" [(ngModel)]="price" #priceControl="ngModel" required  >
+                                <span  class="alert alert-danger" role="alert" *ngIf="priceControl.touched && priceControl.invalid">Price should be filled</span>    
+                            </div>
+                    </div>
+    
+                    <div class="form-group row">
+                            <div class="col-sm-10">
+                            <input type="submit" class="btn btn-danger" value="Save Album" [disabled]="albumForm.invalid">
+                            </div>
+                        </div>
+                    </form>                      
+<br>
